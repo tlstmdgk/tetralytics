@@ -1,3 +1,5 @@
+![Main Page](screenshot.png)
+
 **Submitted by:** Seungha Shin (sshin128)  
 **Group Members:** Seungha Shin (sshin128)  
 **App Description:** Allows users to submit their TETR.IO username, view stats, and rank users based on sprint time.  
