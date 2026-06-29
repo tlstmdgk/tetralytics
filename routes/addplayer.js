@@ -53,16 +53,14 @@ async function getRating(username) {
 }
 
 async function getUser(username) {
-    const res = await fetch(
-        `https://ch.tetr.io/api/users/${username}`
-    );
+  const response = await fetch(`https://ch.tetr.io/api/users/${username}`);
+  const data = await response.json();
+  
+  console.log('TETR.IO response status:', response.status);
+  console.log('TETR.IO response body:', JSON.stringify(data));
 
-    const json = await res.json();
-
-    if (!json.success) {
-        throw new Error("TETR.IO API error");
-    }
-    return json.data;
+  if (!data.success) throw new Error(`TETR.IO API error: ${JSON.stringify(data)}`);
+  return data.data;
 }
 
 router.post("/", async (req, res) => {
