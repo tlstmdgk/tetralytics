@@ -8,9 +8,9 @@ const portNumber = process.env.PORT || 4000
 require("dotenv").config({
    path: path.resolve(__dirname, "./localenv/.env"),
 });
-
-const Player = require("./models/Player");
 */
+const Player = require("./models/Player");
+
 /* express stuff */
 const app = express();
 app.use(express.json());
